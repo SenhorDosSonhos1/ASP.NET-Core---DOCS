@@ -55,4 +55,11 @@ O roteamento no ASP.NET Core é responsável por mapear as URLs das requisiçõe
 
 ```csharp
 pattern: "{controller=Home}/{action=Index}/{id?}"
+```
+Esse padrão indica que:
 
+{controller=Home} → Se nenhuma rota for informada, o controller padrão será HomeController.
+
+{action=Index} → Se nenhuma action for informada, será executado o método Index().
+
+{id?} → Parâmetro opcional (como um slug ou id numérico).
