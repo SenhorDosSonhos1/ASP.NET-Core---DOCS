@@ -34,3 +34,24 @@ Acesse: [https://dotnet.microsoft.com/pt-br/download](https://dotnet.microsoft.c
 ### 🚧 Criar um novo projeto MVC
 ```bash
 dotnet new mvc -n NomeDoProjeto
+
+# 📘 Rotas no ASP.NET Core
+
+O roteamento no ASP.NET Core é responsável por mapear as URLs das requisições HTTP para os métodos dos controllers (as *actions*). As rotas (ou endpoints) são definidas no arquivo `Program.cs`.
+
+---
+
+## 🗂️ Estrutura das Rotas
+
+- **URL pai:** Por padrão, é definida pelo nome da classe do Controller (sem o sufixo `"Controller"`).
+- **URL filha:** É definida pelo nome da action (método) dentro desse controller pai.
+
+---
+
+## 🔧 Funcionamento padrão
+
+```csharp
+pattern: "{controller=Home}/{action=Index}/{id?}"
+
+
+
